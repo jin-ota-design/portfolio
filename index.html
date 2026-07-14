@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="#">
   <title>JIN OTA PORTFOLIO</title>
+  <!-- 著作者 -->
+  <meta name="author" content="太田仁">
+  <!-- og -->
+  <meta property="og:title" content="JIN OTA PORTFOLIO">
+  <meta property="og:description" content="#">
+  <meta property="og:image" content="#">
+  <meta property="og:url" content="#x">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="JIN OTA PORTFOLIO">
+  <!-- twitter card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JIN OTA PORTFOLIO">
+  <meta name="twitter:description" content="#">
+  <meta name="twitter:image" content="#x">
+  <meta name="twitter:site" content="#x">
+  <!-- アドレスバー -->
+  <meta name="theme-color" content="#67c86f">
+  <!-- アプリ風 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- icon -->
+  <link rel="apple-touch-icon" href="images/logo.svg">
+  <!-- fabicon -->
+  <link href="images/logo.svg" rel="icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header class="site-header">
     <div class="brand">
@@ -17,13 +45,19 @@
       <span>PORTFOLIO</span>
     </div>
 
-    <nav class="global-nav">
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="global-nav" id="global-nav">
       <a href="index.html" class="is-current">Top</a>
       <a href="works.html">Works</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="#" aria-label="Instagram" class="icon-link">◎</a>
-      <a href="#" aria-label="X" class="icon-link">𝕏</a>
+      <!-- <a href="#" aria-label="Instagram" class="icon-link">◎</a>
+      <a href="#" aria-label="X" class="icon-link">𝕏</a> -->
     </nav>
   </header>
 
@@ -33,56 +67,63 @@
         <div class="top-left">
           <div class="symbol-card">
             <div class="symbol">
-              <div class="circle"></div>
-              <div class="shape shape-a"></div>
-              <div class="shape shape-b"></div>
-              <div class="shape shape-c"></div>
+              <div><img src="images/logo.png" width="420" height="390" alt="太田仁のロゴ画像"></div>
             </div>
           </div>
-
-          <article class="feature-card feature-large">
-            <div class="card-title card-title-dark">Web Design</div>
-            <div class="mockup-wrap">
-              <img src="images/theport.png" alt="Web Design mockup">
-            </div>
-            <a href="works.html" class="arrow-btn" aria-label="Worksへ">↗</a>
-          </article>
+          <a href="works.html" class="feature-card feature-large">
+            <article href="works.html">
+              <div class="card-title card-title-dark">Web Design</div>
+              <div class="mockup-wrap">
+                <img src="images/theport.png" alt="Web Design mockup">
+              </div>
+            </article>
+            <span class="arrow-btn" aria-label="Worksへ">↗</span>
+          </a>
         </div>
 
         <div class="top-right">
-          <article class="feature-card">
-            <div class="card-title">Graphic Design</div>
-            <img src="images/graphic-main.jpg" alt="Graphic Design">
-            <a href="works.html" class="arrow-btn" aria-label="Worksへ">↗</a>
-          </article>
+          <a href="works.html" class="feature-card">
+            <article>
+              <div class="card-title">Graphic Design</div>
+              <!-- <img src="images/name-card.png" alt="Graphic Design"> -->
+              <span class="arrow-btn" aria-label="Worksへ">↗</span>
+            </article>
+          </a>
 
-          <article class="feature-card about-preview">
-            <div class="card-title card-title-dark">About</div>
-            <img src="images/about-photo.jpg" alt="Jin Ota portrait">
-            <div class="preview-text">
+          <div class="img-content feature-card-about">
+            <article class="about-preview">
+              <div class="card-title card-title-dark">About</div>
+              <!-- <img src="images/about-photo.jpg" alt="Jin Ota portrait"> -->
+            </article>
+            <a href="about.html" class="preview-text">
               <h3>太田仁<span>Jin Ota</span></h3>
               <p>よく考えて、よく作る。課題や問題に対して自分が出せる最適解を出し続けます。</p>
-            </div>
-            <a href="about.html" class="arrow-btn" aria-label="Aboutへ">↗</a>
-          </article>
+              <span class="arrow-btn" aria-label="Aboutへ">↗</span>
+            </a>
+          </div>
 
-          <article class="feature-card">
-            <div class="card-title">Illustration</div>
-            <img src="images/illustration-main.jpg" alt="Illustration">
-            <a href="works.html" class="arrow-btn" aria-label="Worksへ">↗</a>
-          </article>
+          <a href="works.html" class="feature-card">
+            <article>
+              <div class="card-title">Logo Design</div>
+              <!-- <img src="images/illustration-main.jpg" alt="Illustration"> -->
+              <span class="arrow-btn" aria-label="Worksへ">↗</span>
+            </article>
+          </a>
 
-          <article class="feature-card small-card">
-            <div class="card-title">Movie</div>
-            <img src="images/movie-main.jpg" alt="Movie">
-            <a href="works.html" class="arrow-btn" aria-label="Worksへ">↗</a>
-          </article>
-
-          <article class="feature-card small-card contact-preview">
-            <div class="card-title card-title-dark">Contact</div>
-            <div class="contact-mini">お問い合わせはこちら</div>
-            <a href="contact.html" class="arrow-btn" aria-label="Contactへ">↗</a>
-          </article>
+          <a href="works.html" class="feature-card small-card">
+            <article>
+              <div class="card-title">Movie</div>
+              <img src="images/movie-main.jpg" alt="Movie">
+              <span class="arrow-btn" aria-label="Worksへ">↗</span>
+            </article>
+          </a>
+          <a href="contact.html" class="feature-card small-card contact-preview">
+            <article>
+              <div class="card-title card-title-dark">Contact</div>
+              <div class="contact-mini">お問い合わせはこちら</div>
+              <span class="arrow-btn" aria-label="Contactへ">↗</span>
+            </article>
+          </a>
         </div>
       </div>
 
@@ -111,5 +152,25 @@
     </nav>
     <p class="footer-copy">All Rights Reserved 2024 © JIN OTA</p>
   </footer>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const globalNav = document.querySelector('.global-nav');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = globalNav.classList.toggle('is-open');
+      menuToggle.classList.toggle('is-active', isOpen);
+      menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    globalNav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        globalNav.classList.remove('is-open');
+        menuToggle.classList.remove('is-active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
 </body>
+
+
 </html>
