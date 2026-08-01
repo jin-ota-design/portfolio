@@ -192,10 +192,10 @@ button {
   grid-column: 1;
   grid-row: 2;
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  background-image: url(images/logo-jin.png);
+  /* background-image: url(images/logo-jin.png);
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 
 /* 4番目の子: Movie */
@@ -858,11 +858,18 @@ hr {
   width: 100%;
   height: auto;
 }
+.sp-img img{
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
 .project-hero-visual .project-img {
   width: 50%;
   margin: 0 auto;
 }
+
 
 .flex-area {
   display: flex;
@@ -1030,7 +1037,70 @@ hr {
   background-color: #ffffff;
   box-shadow: var(--shadow);
 }
+.project-two-col .project-col-body .concept-color .golf-main {
+  background-color: #67c8d7;
+}
 
+.project-two-col .project-col-body .concept-color .golf-sub {
+  background-color: #FFA4DC;
+}
+
+.project-two-col .project-col-body .concept-color .golf-black {
+  background-color: #0D2236;
+  box-shadow: var(--shadow);
+}
+
+.project-two-col .project-col-body .concept-color .golf-ac {
+  background-color: #ff8931;
+}
+.project-two-col .project-col-body .concept-color .golf2-main {
+  background-color: #4183DB;
+}
+
+.project-two-col .project-col-body .concept-color .golf2-sub {
+  background-color: #E6F0F7;
+  box-shadow: var(--shadow);
+}
+
+.project-two-col .project-col-body .concept-color .golf2-black {
+  background-color: #0D2236;
+}
+
+.project-two-col .project-col-body .concept-color .golf2-ac {
+  background-color: #FF7300;
+}
+.project-two-col .project-col-body .concept-color .gene-main {
+  background-color: #32D0BE;
+}
+
+.project-two-col .project-col-body .concept-color .gene-sub {
+  background-color: #ECF1F7;
+  box-shadow: var(--shadow);
+}
+
+.project-two-col .project-col-body .concept-color .gene-black {
+  background-color: #192624;
+}
+
+.project-two-col .project-col-body .concept-color .gene-ac {
+  background-color: #F37928;
+}
+.project-two-col .project-col-body .concept-color .skytgym-main {
+  background-color: #007ec3;
+}
+
+.project-two-col .project-col-body .concept-color .skytgym-sub {
+  background-color: #e6f0f7;
+  box-shadow: var(--shadow);
+}
+
+.project-two-col .project-col-body .concept-color .skytgym-black {
+  background-color: #000000;
+}
+
+.project-two-col .project-col-body .concept-color .skytgym-ac {
+  background-color: #ebcd00;
+}
 .project-two-col .project-col-body .main {
   width: 50%;
 }
@@ -1161,6 +1231,9 @@ hr {
 
 .project-visuals .project-visual-main {
   margin: 0 auto;
+      max-width: 350px;
+    height: auto;
+    width: 100%;
 }
 
 /* .project-visual-main {
@@ -1168,7 +1241,10 @@ hr {
 } */
 
 .project-visual-side {
-  min-height: 1100px;
+  max-width: 350px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
 .project-bottom-nav {
