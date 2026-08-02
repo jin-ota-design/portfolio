@@ -174,10 +174,10 @@ button {
   grid-column: 1;
   grid-row: 1;
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  background-image: url(images/poster.png);
+  /* background-image: url(images/poster.png);
   background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-repeat: no-repeat; */
+  /* background-size: contain; */
 }
 
 /* 2番目の子: About（img-content） */
@@ -192,10 +192,10 @@ button {
   grid-column: 1;
   grid-row: 2;
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  /* background-image: url(images/logo-jin.png);
+  /* background-image: url(images/logo-restaurant3.png);
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: contain; */
 }
 
 /* 4番目の子: Movie */
@@ -301,7 +301,7 @@ button {
 
 .feature-card img {
   width: 100%;
-  height: calc(100% - 36px);
+  height: auto;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -329,7 +329,18 @@ button {
   display: grid;
   place-items: center;
 }
-
+.mockup-wrap2,
+.mockup-wrap3{
+  width: 65%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mockup-wrap3{
+  width: 75%;
+}
 .mockup-wrap img {
   width: 88%;
   max-width: 760px;
