@@ -174,10 +174,10 @@ button {
   grid-column: 1;
   grid-row: 1;
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  /* background-image: url(images/poster.png);
+  background-image: url(images/poster.png);
   background-position: center bottom;
-  background-repeat: no-repeat; */
-  /* background-size: contain; */
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* 2番目の子: About（img-content） */
@@ -192,10 +192,10 @@ button {
   grid-column: 1;
   grid-row: 2;
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  /* background-image: url(images/logo-restaurant3.png);
+  background-image: url(images/logo-restaurant3.png);
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain; */
+  background-size: contain;
 }
 
 /* 4番目の子: Movie */
