@@ -227,7 +227,7 @@ button {
 }
 
 .symbol-card {
-  min-height: 280px;
+  min-height: 430px;
   display: grid;
   place-items: center;
   background: transparent;
@@ -238,8 +238,9 @@ button {
 }
 
 .symbol {
-  width: min(100%, 460px);
-  padding: 20px;
+      max-width: 650px;
+    width: 100%;
+    padding: 20px;
 }
 
 .circle,
@@ -310,7 +311,7 @@ button {
   margin-bottom: 10px;
   font-size: clamp(22px, 2.2vw, 42px);
   font-weight: 400;
-  color: #002320;
+  color: var(--text);
 }
 
 /* .card-title-dark {
@@ -1557,7 +1558,7 @@ hr {
   }
 
   .symbol-card {
-    min-height: 200px;
+    min-height: 350px;
   }
 
   .contact-box {
