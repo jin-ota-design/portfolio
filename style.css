@@ -64,7 +64,7 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .brand,
@@ -203,6 +203,10 @@ button {
   grid-column: 1;
   grid-row: 3;
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  background-image: url(images/tik.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* 5番目の子: Contact */
@@ -223,7 +227,7 @@ button {
   background: var(--bg);
   box-shadow: var(--shadow);
   border-radius: var(--radius);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .symbol-card {
@@ -238,9 +242,9 @@ button {
 }
 
 .symbol {
-      max-width: 650px;
-    width: 100%;
-    padding: 20px;
+  max-width: 650px;
+  width: 100%;
+  padding: 20px;
 }
 
 .circle,
@@ -330,18 +334,21 @@ button {
   display: grid;
   place-items: center;
 }
+
 .mockup-wrap2,
-.mockup-wrap3{
+.mockup-wrap3 {
   width: 65%;
-    height: auto;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.mockup-wrap3{
+
+.mockup-wrap3 {
   width: 75%;
 }
+
 .mockup-wrap img {
   width: 88%;
   max-width: 760px;
@@ -607,6 +614,7 @@ hr {
 
 .about-photo {
   min-height: 72svh;
+  /* max-width: 860px; */
   border-radius: var(--radius);
   overflow: hidden;
 }
@@ -870,7 +878,8 @@ hr {
   width: 100%;
   height: auto;
 }
-.sp-img img{
+
+.sp-img img {
   width: 50%;
   height: auto;
   display: block;
@@ -901,6 +910,11 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 100px;
+}
+
+.guide-img {
+  width: 20%;
+  margin: 0 auto;
 }
 
 .project-two-col {
@@ -1049,6 +1063,7 @@ hr {
   background-color: #ffffff;
   box-shadow: var(--shadow);
 }
+
 .project-two-col .project-col-body .concept-color .golf-main {
   background-color: #67c8d7;
 }
@@ -1065,6 +1080,7 @@ hr {
 .project-two-col .project-col-body .concept-color .golf-ac {
   background-color: #ff8931;
 }
+
 .project-two-col .project-col-body .concept-color .golf2-main {
   background-color: #4183DB;
 }
@@ -1081,6 +1097,7 @@ hr {
 .project-two-col .project-col-body .concept-color .golf2-ac {
   background-color: #FF7300;
 }
+
 .project-two-col .project-col-body .concept-color .gene-main {
   background-color: #32D0BE;
 }
@@ -1097,6 +1114,7 @@ hr {
 .project-two-col .project-col-body .concept-color .gene-ac {
   background-color: #F37928;
 }
+
 .project-two-col .project-col-body .concept-color .skytgym-main {
   background-color: #007ec3;
 }
@@ -1113,8 +1131,18 @@ hr {
 .project-two-col .project-col-body .concept-color .skytgym-ac {
   background-color: #ebcd00;
 }
+
 .project-two-col .project-col-body .main {
   width: 50%;
+}
+
+.project-two-col .project-col-body .concept-color .leciel-main {
+  background-color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.project-two-col .project-col-body .concept-color .leciel-black {
+  background-color: #252525;
 }
 
 .project-two-col .project-col-body .sub {
@@ -1243,9 +1271,9 @@ hr {
 
 .project-visuals .project-visual-main {
   margin: 0 auto;
-      max-width: 350px;
-    height: auto;
-    width: 100%;
+  max-width: 350px;
+  height: auto;
+  width: 100%;
 }
 
 /* .project-visual-main {
@@ -1254,9 +1282,9 @@ hr {
 
 .project-visual-side {
   max-width: 350px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .project-bottom-nav {
@@ -1366,8 +1394,7 @@ hr {
 /* ── responsive ── */
 @media (max-width: 1200px) {
 
-  .top-grid,
-  .about-grid {
+  .top-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1376,11 +1403,40 @@ hr {
   }
 
   .about-photo {
-    min-height: 55svh;
+    min-height: 330px;
   }
 }
 
 @media (max-width: 860px) {
+  .project-two-col .project-col-body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-two-col .project-col-body .main2 {
+    width: 100%;
+  }
+
+  .project-two-col .project-col-body .sub2 {
+    width: 80%
+  }
+
+  .project-two-col .project-col-body .black2 {
+    width: 60%;
+  }
+
+  .project-two-col .project-col-body .ac {
+    width: 40%;
+  }
+
+  .guide-img {
+    width: 50%;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
   :root {
     --header-h: 132px;
   }
@@ -1535,6 +1591,10 @@ hr {
 }
 
 @media (max-width: 540px) {
+  .guide-img {
+    width: 70%;
+  }
+
   .footer-nav {
     grid-template-columns: 1fr;
   }

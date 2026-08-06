@@ -111,11 +111,18 @@
               <span class="arrow-btn" aria-label="Worksへ">↗</span>
             </article>
           </a>
-
+          <!-- 
           <a href="works.html?filter=Movie" class="feature-card small-card">
             <article>
               <div class="card-title">Movie</div>
               <img src="images/movie-main.jpg" alt="Movie">
+              <span class="arrow-btn" aria-label="Worksへ">↗</span>
+            </article>
+          </a> -->
+          <a href="https://www.tiktok.com/@_haru_cooking" target="_blank" class="feature-card small-card">
+            <article>
+              <div class="card-title">Movie</div>
+              <!-- <img src="images/tik.png" alt="Movie"> -->
               <span class="arrow-btn" aria-label="Worksへ">↗</span>
             </article>
           </a>
@@ -170,6 +177,9 @@
         menuToggle.classList.remove('is-active');
         menuToggle.setAttribute('aria-expanded', 'false');
       });
+    });
+    window.addEventListener("load", () => {
+      document.body.offsetHeight;
     });
   </script>
 </body>
