@@ -694,7 +694,7 @@ hr {
 
 /* ── contact ── */
 .contact-hero {
-  min-height: 42svh;
+  /* min-height: 42svh; */
   border-radius: var(--radius);
   overflow: hidden;
   width: 100%;
