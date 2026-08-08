@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="#">
+  <title>JIN OTA PORTFOLIO</title>
+  <!-- 著作者 -->
+  <meta name="author" content="太田仁">
+  <!-- og -->
+  <meta property="og:title" content="JIN OTA PORTFOLIO">
+  <meta property="og:description" content="#">
+  <meta property="og:image" content="#">
+  <meta property="og:url" content="#x">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="JIN OTA PORTFOLIO">
+  <!-- twitter card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JIN OTA PORTFOLIO">
+  <meta name="twitter:description" content="#">
+  <meta name="twitter:image" content="#x">
+  <meta name="twitter:site" content="#x">
+  <!-- アドレスバー -->
+  <meta name="theme-color" content="#67c86f">
+  <!-- アプリ風 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- icon -->
+  <link rel="apple-touch-icon" href="images/logo.svg">
+  <!-- fabicon -->
+  <link href="images/logo.svg" rel="icon">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/jct0rkb.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html">
+      <div class="brand">
+        <span>JIN</span>
+        <span>OTA</span>
+        <span>PORTFOLIO</span>
+      </div>
+    </a>
+
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="global-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="global-nav" id="global-nav">
+      <a href="index.html">Top</a>
+      <a href="works.html">Works</a>
+      <a href="works-process.html" class="is-current">Process</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="section contact-section">
+      <div class="section-head">
+        <p class="process-label"><a href="index.html">Top</a>>Contact</p>
+        <h1>Contact</h1>
+      </div>
+
+      <div class="contact-hero">
+        <img src="images/contact.png" alt="Contact visual">
+      </div>
+
+      <div class="contact-box">
+        <a href="mailto:jinota0112@gmail.com">jinota0112@gmail.com</a>
+      </div>
+    </section>
+  </main>
+  <hr>
+
+  <footer class="site-footer">
+    <nav class="footer-nav">
+      <a href="index.html" class="footer-card">
+        <span>Top</span>
+        <span class="footer-arrow">↗</span>
+      </a>
+      <a href="works.html" class="footer-card">
+        <span>Works</span>
+        <span class="footer-arrow">↗</span>
+      </a>
+      <a href="works-process.html" class="footer-card">
+        <span>Process</span>
+        <span class="footer-arrow">↗</span>
+      </a>
+      <a href="about.html" class="footer-card">
+        <span>About</span>
+        <span class="footer-arrow">↗</span>
+      </a>
+      <a href="contact.html" class="footer-card">
+        <span>Contact</span>
+        <span class="footer-arrow">↗</span>
+      </a>
+    </nav>
+    <p class="footer-copy">All Rights Reserved 2026 © JIN OTA</p>
+  </footer>
+    <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const globalNav = document.querySelector('.global-nav');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = globalNav.classList.toggle('is-open');
+      menuToggle.classList.toggle('is-active', isOpen);
+      menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    globalNav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        globalNav.classList.remove('is-open');
+        menuToggle.classList.remove('is-active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
