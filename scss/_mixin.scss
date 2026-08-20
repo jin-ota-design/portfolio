@@ -1,0 +1,124 @@
+// ============================================================
+// _mixin.scss
+// ============================================================
+// 使い方: style.scss で @use "mixin" as m; してから
+//         @include m.mixin-name; または @include m.mixin-name { ... } で呼び出す
+// ============================================================
+
+
+// ─────────────────────────────────────────────────────────────
+// Breakpoints
+// ─────────────────────────────────────────────────────────────
+$bp-sp-sm:       540px;
+$bp-sp:          640px;
+$bp-tablet-sm:   860px;
+$bp-tablet:      980px;
+$bp-tablet-wide: 1200px;
+
+
+// ─────────────────────────────────────────────────────────────
+// Media Query Mixins
+// ─────────────────────────────────────────────────────────────
+
+// ～540px  スマートフォン(小)
+@mixin sp-sm {
+  @media (max-width: #{$bp-sp-sm}) {
+    @content;
+  }
+}
+
+// ～640px  スマートフォン
+@mixin sp {
+  @media (max-width: #{$bp-sp}) {
+    @content;
+  }
+}
+
+// ～860px  タブレット(小)
+@mixin tablet-sm {
+  @media (max-width: #{$bp-tablet-sm}) {
+    @content;
+  }
+}
+
+// ～980px  タブレット
+@mixin tablet {
+  @media (max-width: #{$bp-tablet}) {
+    @content;
+  }
+}
+
+// ～1200px タブレット(大)
+@mixin tablet-wide {
+  @media (max-width: #{$bp-tablet-wide}) {
+    @content;
+  }
+}
+
+
+// ─────────────────────────────────────────────────────────────
+// Font Mixins
+// ─────────────────────────────────────────────────────────────
+
+// 欧文フォント (Futura PT)
+@mixin en-font {
+  font-family: var(--ENtext);
+}
+
+// 和文フォント (Zen Kaku Gothic New)
+@mixin jp-font {
+  font-family: var(--JPtext);
+}
+
+
+// ─────────────────────────────────────────────────────────────
+// Card Mixins
+// ─────────────────────────────────────────────────────────────
+
+// neumorphic カード共通ベース (background + shadow + radius)
+@mixin card-base {
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+}
+
+// カードのホバートランジション
+@mixin card-transition {
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+
+// ─────────────────────────────────────────────────────────────
+// Text Mixins
+// ─────────────────────────────────────────────────────────────
+
+// セクション見出し (.section-head h1/h2 など)
+@mixin section-title {
+  font-family: var(--ENtext);
+  margin: 0;
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
+
+// ミュートカラーの小さいラベルテキスト (欧文フォント + muted色)
+@mixin muted-label {
+  color: var(--muted);
+  font-family: var(--ENtext);
+}
+
+// 日本語本文テキスト (JPフォント + font-weight: 400)
+@mixin jp-body {
+  font-family: var(--JPtext);
+  font-weight: 400;
+}
+
+// opacity フェードホバー
+@mixin fade-hover {
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
