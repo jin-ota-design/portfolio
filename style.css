@@ -325,6 +325,9 @@ button {
   font-weight: 300;
   color: var(--text);
 }
+.card-title-dark span{
+  font-family: var(--JPtext);
+}
 .white{
   color: var(--white);
 }

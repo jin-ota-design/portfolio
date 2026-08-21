@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass scss/style.scss css/style.css --source-map",
+    "sass:watch": "sass --watch scss/style.scss:css/style.css --source-map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jin-ota-design/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jin-ota-design/portfolio/issues"
+  },
+  "homepage": "https://github.com/jin-ota-design/portfolio#readme",
+  "devDependencies": {
+    "sass": "^1.103.1"
+  }
+}
