@@ -116,6 +116,12 @@ button {
   font-size: 15px;
   line-height: 1;
 }
+.sp-top{
+  display: none;
+}
+.pc-top{
+  display: block;
+}
 
 /* ── common section ── */
 .section {
@@ -2318,6 +2324,12 @@ hr {
 }
 
 @media (max-width: 540px) {
+  .sp-top{
+  display: block;
+}
+.pc-top{
+  display: none;
+}
   .guide-img {
     width: 70%;
   }
