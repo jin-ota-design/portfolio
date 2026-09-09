@@ -2436,7 +2436,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
+  background: var(--bg);
 }
 
 #intro-loader img {
