@@ -2,6 +2,7 @@
 <html lang="ja">
 
 <head>
+  <script>document.documentElement.classList.add('js');</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="#">
@@ -179,17 +180,42 @@
     <p class="footer-copy">All Rights Reserved 2026 © JIN OTA</p>
   </footer>
 
-  <script>
+  <script type="module">
+    // Filter (Motion: https://motion.dev で切り替えをフェード＋スライドさせる。
+    // 読み込みに失敗した場合は元の即時切り替えにフォールバックする)
     const chips = document.querySelectorAll('.chip');
     const cards = document.querySelectorAll('.work-card');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    function applyFilter(filter) {
+    let animate = null;
+    if (!prefersReducedMotion) {
+      try {
+        ({ animate } = await import('https://cdn.jsdelivr.net/npm/motion@13/+esm'));
+      } catch (err) {
+        console.error('[works-filter] Motionの読み込みに失敗しました', err);
+      }
+    }
+
+    function applyFilter(filter, { animated = true } = {}) {
       chips.forEach(c => c.classList.toggle('is-active', c.dataset.filter === filter));
+
       cards.forEach(card => {
-        if (filter === 'all' || card.dataset.category === filter) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
+        const show = filter === 'all' || card.dataset.category === filter;
+
+        if (!animate || !animated) {
+          card.style.display = show ? '' : 'none';
+          return;
+        }
+
+        if (show) {
+          if (card.style.display === 'none') {
+            card.style.display = '';
+            animate(card, { opacity: [0, 1], y: [12, 0] }, { duration: 0.35, easing: [0.22, 1, 0.36, 1] });
+          }
+        } else if (card.style.display !== 'none') {
+          animate(card, { opacity: 0, y: -8 }, { duration: 0.2, easing: 'ease-in' }).finished.then(() => {
+            card.style.display = 'none';
+          });
         }
       });
     }
@@ -200,13 +226,13 @@
       });
     });
 
-    // URLの ?filter=... を読み取って最初から適用する
+    // URLの ?filter=... を読み取って最初から適用する（初期表示はアニメーションさせない）
     const params = new URLSearchParams(window.location.search);
     const initialFilter = params.get('filter');
     if (initialFilter) {
       const matchedChip = Array.from(chips).find(c => c.dataset.filter === initialFilter);
       if (matchedChip) {
-        applyFilter(initialFilter);
+        applyFilter(initialFilter, { animated: false });
       }
     }
   </script>
@@ -230,6 +256,7 @@
   </script>
 
 
+  <script type="module" src="js/site-motion.js"></script>
 </body>
 
 </html>

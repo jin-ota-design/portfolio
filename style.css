@@ -2401,3 +2401,67 @@ hr {
     font-size: clamp(24px, 7vw, 42px);
   }
 }
+/* =====================================================
+   Motion (https://motion.dev) によるスクロール演出 用の追加スタイル
+   既存のデザインルールは変更していません。
+   JS実行時のみ、対象要素を初期状態でわずかに隠しておき、
+   スクロールで画面に入ったタイミングで js/site-motion.js が
+   フェード＋スライドで表示します（JS無効時・低減モーション時は常に表示）。
+   ===================================================== */
+@media (prefers-reduced-motion: no-preference) {
+  html.js .section-head,
+  html.js .symbol-card,
+  html.js .feature-card,
+  html.js .feature-card-about,
+  html.js .work-card,
+  html.js .info-card,
+  html.js .about-photo,
+  html.js .panel,
+  html.js .contact-hero,
+  html.js .contact-box,
+  html.js .project-heading {
+    opacity: 0;
+  }
+}
+
+/* =====================================================
+   トップページ限定：ローディング演出 (js/home-intro.js)
+   参考: https://www.tsg-jpn.co.jp/ のようなオープニング演出。
+   既存のデザインには影響しません（新しく追加した #intro-loader 要素にのみ適用）。
+   ===================================================== */
+#intro-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+#intro-loader img {
+  width: min(120px, 28vw);
+  height: auto;
+  opacity: 0;
+}
+
+body.intro-lock {
+  overflow: hidden;
+}
+
+/* =====================================================
+   派手バージョン追加分：フラッシュ演出 と 3D回転のための perspective
+   既存のデザイン(レイアウト・サイズ・色)には影響しません。
+   ===================================================== */
+#intro-flash {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.top-grid {
+  perspective: 1400px;
+}

@@ -2,6 +2,7 @@
 <html lang="ja">
 
 <head>
+  <script>document.documentElement.classList.add('js');</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="#">
@@ -41,6 +42,11 @@
 </head>
 
 <body>
+  <div id="intro-loader" aria-hidden="true">
+    <img src="images/logo.svg" alt="" width="120" height="120">
+  </div>
+  <div id="intro-flash" aria-hidden="true"></div>
+
   <header class="site-header">
     <a href="index.html">
       <div class="brand">
@@ -181,6 +187,8 @@
       document.body.offsetHeight;
     });
   </script>
+  <script type="module" src="js/site-motion.js"></script>
+  <script type="module" src="js/home-intro.js"></script>
 </body>
 
 
