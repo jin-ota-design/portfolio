@@ -339,7 +339,7 @@ button {
   font-size: clamp(22px, 2.2vw, 42px);
   font-weight: 300;
   color: var(--text);
-  
+
 }
 
 .card-title-dark span {
@@ -356,8 +356,9 @@ button {
   box-shadow: var(--shadow);
   /* background: var(--bg); */
 }
-.feature-large .card-title-dark{
-  text-shadow: 
+
+.feature-large .card-title-dark {
+  text-shadow:
     0 0 2px #fff,
     0 0 5px #fff,
     0 0 10px #fff,
@@ -473,19 +474,23 @@ button {
   width: 34px;
   height: 34px;
   border-radius: 10px;
-  background: var(--white);
+  background: var(--bg);
   display: grid;
   place-items: center;
   color: var(--accent);
   font-size: 18px;
   transition: background 0.2s, color 0.2s;
+  box-shadow:
+    -3px -3px 5px #ffffff inset,
+    3px 3px 5px rgba(0, 0, 0, 0.15) inset;
 }
 
 /* .preview-text{
   position: relative;
 } */
 
-.arrow-btn:hover {
+.arrow-btn:hover,
+.footer-arrow:hover {
   background: var(--accent);
   color: var(--white);
 }
@@ -538,11 +543,17 @@ button {
   font-size: 20px;
   line-height: 1;
   display: block;
-  background-color: #fff;
+  background-color: var(--bg);
   padding: 10px;
-  border-radius: 5px;
-  color: #67c86f;
+  border-radius: 10px;
+  color: var(--accent);
+  box-shadow:
+    -3px -3px 5px #ffffff inset,
+    3px 3px 5px rgba(0, 0, 0, 0.15) inset;
+  transition: background 0.2s, color 0.2s;
+
 }
+
 
 .footer-copy {
   margin: 20px auto;
@@ -621,11 +632,12 @@ hr {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--bg);
   padding: 6px 10px;
   border-radius: 999px;
   font-size: 13px;
   z-index: 2;
+  box-shadow: -3px -3px 5px #fff inset, 3px 3px 5px rgba(0, 0, 0, 0.15) inset;
 }
 
 .work-card img {
@@ -966,6 +978,7 @@ hr {
   color: #fff;
   box-shadow: var(--shadow);
   transition: transform 0.2s ease, opacity 0.2s ease;
+  box-shadow: -3px -3px 5px #f0f1f5 inset, 3px 3px 5px rgba(0, 0, 0, 0.15) inset;
 }
 
 .project-link-btn:hover {
@@ -2401,6 +2414,7 @@ hr {
     font-size: clamp(24px, 7vw, 42px);
   }
 }
+
 /* =====================================================
    Motion (https://motion.dev) によるスクロール演出 用の追加スタイル
    既存のデザインルールは変更していません。
@@ -2409,6 +2423,7 @@ hr {
    フェード＋スライドで表示します（JS無効時・低減モーション時は常に表示）。
    ===================================================== */
 @media (prefers-reduced-motion: no-preference) {
+
   html.js .section-head,
   html.js .symbol-card,
   html.js .feature-card,
