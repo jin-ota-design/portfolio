@@ -978,7 +978,7 @@ hr {
   color: #fff;
   box-shadow: var(--shadow);
   transition: transform 0.2s ease, opacity 0.2s ease;
-  box-shadow: -3px -3px 5px #f0f1f5 inset, 3px 3px 5px rgba(0, 0, 0, 0.15) inset;
+  box-shadow: 0 4px 4px #00000006,0 0 0 1px #00000012,inset 0 1px #ffffffbf;
 }
 
 .project-link-btn:hover {
