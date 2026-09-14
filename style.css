@@ -214,7 +214,7 @@ button {
   grid-column: 1;
   grid-row: 2;
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  background-image: url(images/logo-restaurant3.png);
+  background-image: url(images/promove1.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1265,7 +1265,7 @@ hr {
 }
 
 .project-two-col .project-col-body .concept-color .leciel-black {
-  background-color: #252525;
+  background-color: #000000;
 }
 
 .project-two-col .project-col-body .sub {
