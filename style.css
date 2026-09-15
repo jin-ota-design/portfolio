@@ -610,6 +610,7 @@ hr {
 }
 
 .chip.is-active {
+  box-shadow: 0 4px 4px #00000006, 0 0 0 1px #00000012, inset 0 1px #ffffffbf;
   background: #67c86f;
   color: #fff;
 }
