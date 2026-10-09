@@ -2084,4 +2084,50 @@ hr {
   .contact-box a {
     font-size: clamp(24px, 7vw, 42px);
   }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html.js .section-head,
+  html.js .symbol-card,
+  html.js .feature-card,
+  html.js .feature-card-about,
+  html.js .work-card,
+  html.js .info-card,
+  html.js .about-photo,
+  html.js .panel,
+  html.js .contact-hero,
+  html.js .contact-box,
+  html.js .project-heading {
+    opacity: 0;
+  }
+}
+#intro-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #67c86f;
+}
+#intro-loader img {
+  width: min(120px, 28vw);
+  height: auto;
+  opacity: 0;
+}
+
+body.intro-lock {
+  overflow: hidden;
+}
+
+#intro-flash {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.top-grid {
+  perspective: 1400px;
 }/*# sourceMappingURL=style.css.map */

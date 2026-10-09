@@ -1395,16 +1395,30 @@ hr {
   gap: 20px;
 }
 
+.project-visuals .project-visual-main4 {
+  
+  margin: 0 auto;
+  max-width: 1200px;
+  height: auto;
+  width: 100%;
+  img{
+    border-radius: 20px;
+  }
+}
 .project-visuals .project-visual-main {
+  
   margin: 0 auto;
   max-width: 350px;
   height: auto;
   width: 100%;
+  /* img{
+    border-radius: 20px;
+  } */
 }
 
-/* .project-visual-main {
+.project-visual-main {
   min-height: 1100px;
-} */
+}
 
 .project-visual-side {
   max-width: 350px;
