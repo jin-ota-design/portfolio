@@ -1264,9 +1264,21 @@ hr {
   background-color: #fff;
   box-shadow: var(--shadow);
 }
-
 .project-two-col .project-col-body .concept-color .leciel-black {
   background-color: #000000;
+}
+
+.project-two-col .project-col-body .concept-color .riva-main {
+  background-color: #b53f3c;
+}
+
+.project-two-col .project-col-body .concept-color .riva-sub {
+  background-color: #f6eef0;
+  box-shadow: var(--shadow);
+}
+
+.project-two-col .project-col-body .concept-color .riva-black {
+  background-color: #291312;
 }
 
 .project-two-col .project-col-body .sub {
