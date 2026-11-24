@@ -485,10 +485,6 @@ button {
     3px 3px 5px rgba(0, 0, 0, 0.15) inset;
 }
 
-/* .preview-text{
-  position: relative;
-} */
-
 .arrow-btn:hover,
 .footer-arrow:hover {
   background: var(--accent);
