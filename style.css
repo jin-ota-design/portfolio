@@ -1277,6 +1277,19 @@ hr {
   background-color: #291312;
 }
 
+.project-two-col .project-col-body .concept-color .lox-main {
+  background-color: #2b5caa;
+}
+
+.project-two-col .project-col-body .concept-color .lox-sub {
+  background-color: #e6f2ff;
+  box-shadow: var(--shadow);
+}
+
+.project-two-col .project-col-body .concept-color .lox-black {
+  background-color: #e63a69;
+}
+
 .project-two-col .project-col-body .sub {
   width: 30%;
 }
